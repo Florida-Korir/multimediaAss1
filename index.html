@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida Korir's Blog</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            overflow: auto;
+        }
+
+        header,
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em;
+            position: relative;
+        }
+
+        header::before,
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(56, 109, 46, 0.679) 10%, rgba(255, 255, 255, 0) 70%);
+            animation: bubble 10s linear infinite;
+        }
+
+        @keyframes bubble {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(50%, -50%);
+            }
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .half-screen {
+            width: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .half-screen img {
+            width: auto;
+            height: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .half-screen:hover img {
+            transform: scale(1.1);
+        }
+
+        .blog {
+            width: 50;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .project-box {
+            width: 100%;
+            margin: 15px;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            cursor: pointer;
+            position: relative;
+            background-color: #ddd;
+        }
+
+        .project-box::before {
+            content: "";
+            display: block;
+            padding-top: 75%;
+        }
+
+        .project-box:hover::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .project-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: opacity 0.3s;
+            color: #333;
+            font-family: Arial;
+            z-index: 1;
+        }
+
+        .project-text button,
+        .project-text button+span {
+            background-color: #9dffb3;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .centered-text {
+            text-align: center;
+            margin-top: 20px;
+            font-family: sitka;
+        }
+
+        hr:nth-child(2) {
+            border: none;
+            background: none;
+            height: 0;
+            margin: 0;
+            display: none;
+        }
+
+        .separator {
+            width: 100%;
+            border: none;
+            height: 2px;
+            background-color: #333;
+            margin: 20px 0;
+        }
+
+        .bigger-box {
+            padding: 30px;
+            font-size: 20px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .half-screen {
+                width: 50%;
+            }
+
+            .blog {
+                width: 50%;
+            }
+
+            .project-box {
+                width: calc(30% - 30px);
+            }
+
+            .project-text {
+                top: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Florida Korir's Blog</h1>
+    </header>
+
+    <section>
+        <div class="half-screen">
+            <!-- Placeholder box for the main picture -->
+            <div class="project-box"></div>
+        </div>
+        <div class="blog">
+            <p>My blog post stories are all about me,<br>
+                My personality,<br>
+                My knowledge,<br>
+                and my character.<br>
+                With every post, I share insights,<br>
+                Solutions to problems, we face as teenagers.<br>
+                Join me on this journey of discovery,<br>
+                Together.<br>
+                <b>Florida Korir</b>
+            </p>
+        </div>
+        <hr class="separator">
+        <h2 class="centered-text">Welcome! To the world of Florida.</h2>
+        <hr class="separator">
+        <div class="project-box">
+            <a href="hardworking.html">
+                <!-- Placeholder -->
+            </a>
+            <div class="project-text"><b><i>Best of Florida's books<br><button onclick="window.location.href = 'hardworking.html'">Learn more</button></i></b></div>
+        </div>
+        <div class="project-box">
+            <a href="loving.html">
+                <!-- Placeholder -->
+            </a>
+            <div class="project-text"><b><i>Best of Florida's designs & code skills<br><button onclick="window.location.href = 'loving.html'">Learn more</button></i></b></div>
+        </div>
+        <div class="project-box">
+            <a href="lively.html">
+                <!-- Placeholder -->
+            </a>
+            <div class="project-text "><b><i>Best of Florida's personality<br><button onclick="window.location.href = 'lively.html'">Learn more</button></i></b></div>
+        </div>
+    </section>
+    
+    <footer>
+        <h3>Crafted with love by Florida Korir</h3>
+    </footer>
+
+</body>
+
+</html>
